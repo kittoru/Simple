@@ -1,0 +1,71 @@
+@import '../vars', '../mixins';
+
+.footer {
+  &__top {
+    padding: 29px 0;
+    background-color: $action-color-base;
+    &-content {
+      @include flex-center;
+      justify-content: space-between;
+    }
+  }
+  &__logo-link {
+    @include flex-center;
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__item {
+    &-link {
+      @include flex-center;
+      & svg {
+        cursor: pointer;
+        fill: white;
+        &:hover {
+          fill: $action-color-light;
+        }
+        &:focus {
+          fill: white;
+        }
+        &:active {
+          fill: $action-color-middle;
+        }
+      }
+      &:focus {
+        border-radius: 2px;
+        background-color: $action-color-middle;
+      }
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    padding: 3px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $font--color-04;
+    & span {
+      color: #bcbcbc;
+    }
+  }
+
+  @media (max-width: 320px) {
+    &__top {
+      padding: 20px 0;
+      &-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        & span {
+          height: 1px;
+          width: 100%;
+          background-color: $line-big-color;
+        }
+      }
+    }
+  }
+}

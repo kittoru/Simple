@@ -1,0 +1,111 @@
+@import '../mixins', '../vars';
+
+.sketchbook {
+  
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__content {
+    margin: 114px 0;
+    @include flex-column;
+    gap: 30px;
+    &-top {
+      max-width: 350px;
+      @include flex-column;
+      gap: 8px;
+      padding-bottom: 24px;
+    }
+    &-link {
+      padding: 24px 95px;
+      font-size: 20px;
+      color: $action-color-middle;
+      border: 1px solid $action-color-middle;
+      &:hover {
+        color: #fff;
+        background-color: $action-color-middle;
+      }
+      &:focus {
+        color: $action-color-middle;
+        border: 1px solid $action-color-middle;
+        background-color: $action-color-light;
+      }
+      &:active {
+        color: #fff;
+        background-color: $action-color-dark;
+      }
+    }
+  }
+  &__img {
+    margin-top: 90px;
+    max-width: 730px;
+    height: 410px;
+    width: 100%;
+    background-image: url('../../../img/sketchbook.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (max-width: 768px) {
+    position: relative;
+    &__content {
+      
+      &-top {
+        width: 330px;
+        gap: 20px;
+      }
+    }
+    &__img {
+      position: absolute;
+      right: -8px;  
+      max-width: 370px;
+      background-size: contain;
+    }
+  }
+  @media (max-width: 685px) {
+    &__img {
+      position: static;
+    }
+  }
+  @media (max-width: 576px) {
+    &__inner {
+      padding: 60px 0;
+      flex-direction: column-reverse;
+      gap: 10px;
+    }
+    &__content {
+      margin: 0;
+      &-top {
+        max-width: 510px;
+        width: 100%;
+      }
+      &-link {
+        padding: 19px 65px;
+      }
+    }
+    &__img {
+      margin-top: 0;
+      position: static;
+      max-width: 450px;
+      max-height: 342px;
+      width: 100%;
+    }
+  }
+  @media (max-width: 320px) {
+    &__inner {
+      gap: 0;
+    }
+    &__content {
+      &-link {
+        padding: 15px 38px;
+        font-size: 18px;
+      }
+    }
+    &__img {
+      max-width: 290px;
+      max-height: 221px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@import '../vars', '../mixins';
+
+.result {
+  padding: 90px 0;
+  background-color: $bg-grey;
+
+  &__inner {
+    @include flex-column;
+    gap: 90px;
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__item {
+    padding-top: 19px;
+    @include flex-center;
+    gap: 30px;
+    border-top: 1px solid $line-small-color;
+    &-img {
+      max-height: 118px;
+    }
+    &-card {
+      max-width: 160px;
+      max-height: 118px;
+    }
+    &-title {
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 500;
+      color: $font--color-03;
+    }
+    &-text {
+      line-height: 1.5;
+    }
+  }
+  &__content {
+    @include flex-center;
+    gap: 30px;
+    &-paper {
+      max-width: 730px;
+      max-height: 564px;
+      width: 100%;
+    }
+    &-about {
+      @include flex-column;
+      max-width: 350px;
+      gap: 20px;
+    }
+    &-text {
+      @include flex-column;
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    & {
+      padding: 60px 0;
+    }
+    &__inner {
+      gap: 40px;
+    }
+    &__item {
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    &__content {
+      align-items: start;
+      &-about {
+        max-width: 329px;
+      }
+      &-title {
+        max-width: 329px;
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    &__item {
+      &-img {
+        max-height: 111px;
+      }
+      &-card {
+        max-width: 150px;
+      }
+      &-title {
+        font-size: 16px;
+      }
+      &-text {
+        font-size: 16px;
+      }
+    }
+    &__content {
+      flex-wrap: wrap;
+      gap: 20px;
+      &-paper {
+        max-width: 330px;
+      }
+      &-about {
+        max-width: 510px;
+      }
+      &-text {
+        font-size: 16px;
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    &__inner {
+      gap: 60px;
+    }
+    &__list {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    &__item {
+      flex-wrap: nowrap;
+      gap: 30px;
+      &-img {
+        max-height: 96px;
+      }
+      &-card {
+        max-width: 130px;
+      }
+    }
+    &__content {
+      &-img {
+        max-height: 223px;
+      }
+      &-about {
+        gap: 14px;
+      }
+    }
+    
+  }
+}

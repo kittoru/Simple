@@ -1,0 +1,50 @@
+@import '../mixins', '../vars';
+
+.partners {
+  padding: 90px 0;
+  background-color: $bg-grey;
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__item {
+    &-img {
+      max-width: 255px;
+      max-height: 135px;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+   & { 
+    padding: 60px 0;
+  }
+  }
+  @media (max-width: 576px) {
+    & { 
+     padding: 60px 0;
+     &__list {
+      flex-wrap: wrap;
+     }
+     &__item {
+      &-img {
+        max-width: 240px;
+      }
+     }
+    }
+  }
+  @media (max-width: 320px) {
+    &__list {
+      overflow-x: scroll;
+      flex-wrap: nowrap;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+    &__item {
+      &-img {
+        width: 150px;
+      }
+    }
+  }
+}
