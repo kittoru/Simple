@@ -37,6 +37,7 @@
       color: $font--color-01;
     }
     &-link {
+      padding-bottom: 10px;
       width: 143px;
       @include flex-center;
       gap: 5px;
@@ -69,12 +70,27 @@
       }
     }
   }
-
+  @media (max-width: 1160px) {
+    &__list {
+      overflow-y: hidden;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        width: 100%;
+        height: 6px;
+        border-radius: 20px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background-color: $line-small-color;
+      }
+    }
+  }
   @media (max-width: 768px) {
     padding: 60px 0;
     &__list {
+      overflow: hidden;
       flex-wrap: wrap;
-      gap: 60px 30px;
+      gap: 60px;
     }
     &__item {
       &:nth-child(3) {
@@ -84,20 +100,26 @@
         }
       }
       &-card {
-        width: 330px;
+        width: 300px;
       }
       &-content {
-        max-width: 330px;
+        max-width: 300px;
       }
     }
   }
-  @media (max-width: 576px) {
+  @media (max-width: 707px) {
+    &__list {
+      justify-content: center;
+      gap: 60px 30px;
+    }
+  }
+  @media (max-width: 680px) {
     &__list {
       gap: 40px 30px;
     }
     &__item {
       &-card {
-        max-width: 240px;
+        max-width: 225px;
       }
       &:nth-child(3) {
         .products__item-card {
@@ -105,9 +127,14 @@
           justify-content: start;
         }
       }
+      &:nth-child(2) {
+        img {
+          width: 210px;
+        }
+      }
       &-content {
         gap: 4px;
-        max-width: 240px;
+        max-width: 225px;
       }
       &-title {
         font-size: 24px;
@@ -117,7 +144,7 @@
       }
     }
   }
-  @media (max-width: 320px) {
+  @media (max-width: 530px) {
     &__list {
       justify-content: center;
     }

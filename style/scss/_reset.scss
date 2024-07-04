@@ -30,6 +30,7 @@ body {
 .wrapper {
   min-height: 100%;
   @include flex-column;
+  
 }
 
 main {
@@ -38,6 +39,7 @@ main {
 
 .container {
   max-width: 1110px;
+  padding: 0 15px;
   margin: 0 auto;
   @media (max-width: 768px) {
     max-width: 690px;
@@ -65,8 +67,6 @@ input {
   outline: none;
 }
 
-
-
 a {
   text-decoration: none;
   color: inherit;
@@ -75,10 +75,6 @@ a {
 ul {
   list-style: none;
 }
-
-
-
-
 
 .title {
   line-height: 1;
@@ -90,6 +86,24 @@ ul {
   }
   @media (max-width: 576px) {
     font-size: 24px;
+  }
+}
+
+.shadow {
+  display: none;
+  position: absolute;
+  top: 44px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.50);
+  z-index: 98;
+
+  @media (max-width: 500px) {
+    &.open {
+      display: block;
+    }
   }
 }
 

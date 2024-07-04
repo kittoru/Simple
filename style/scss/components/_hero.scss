@@ -77,7 +77,10 @@
       max-width: 195px;
     }
   }
-  @media (max-width: 460px) {
+  @media (max-width: 495px) {
+    &__inner {
+      justify-content: center;
+    }
     &__img {
       display: none;
     }

@@ -53,16 +53,18 @@
     }
   }
 
+  @media (max-width: 910px){
+    &__item {
+      flex-wrap: wrap;
+      gap: 0;
+    }
+  }
   @media (max-width: 768px) {
     & {
       padding: 60px 0;
     }
     &__inner {
       gap: 40px;
-    }
-    &__item {
-      flex-wrap: wrap;
-      gap: 0;
     }
     &__content {
       align-items: start;
@@ -103,12 +105,10 @@
       }
     }
   }
-  @media (max-width: 320px) {
-    &__inner {
-      gap: 60px;
-    }
+  @media (max-width: 557px) {
     &__list {
       flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
     }
     &__item {
@@ -120,6 +120,11 @@
       &-card {
         max-width: 130px;
       }
+    }
+  }
+  @media (max-width: 320px) {
+    &__inner {
+      gap: 60px;
     }
     &__content {
       &-img {
