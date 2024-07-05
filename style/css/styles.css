@@ -1,6 +1,9 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html, body {
   height: 100%;
 }
 
@@ -14,7 +17,6 @@ html {
 }
 
 body {
-  height: 100%;
   position: relative;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -29,6 +31,7 @@ body {
 }
 
 .wrapper {
+  position: relative;
   min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,7 +117,7 @@ ul {
   bottom: 0;
   right: 0;
   left: 0;
-  height: 100%;
+  height: calc(100% - 44px);
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 98;
 }

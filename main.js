@@ -9,6 +9,7 @@ const menu = document.querySelector('.header__list');
 const shadow = document.querySelector('.shadow');
 
 
+
 search.addEventListener('click', ()=> {
   input.classList.add('open');
 });
@@ -16,6 +17,9 @@ search.addEventListener('click', ()=> {
 inputClose.addEventListener('click', ()=> {
   input.classList.remove('open');
 });
+
+
+
 
 buttonOpen.addEventListener('click', ()=> {
   menu.classList.add('mobile__list');
